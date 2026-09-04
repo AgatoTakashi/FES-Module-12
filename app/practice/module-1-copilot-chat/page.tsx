@@ -73,11 +73,9 @@ export default function Module1Practice() {
             <p className="text-gray-600 mb-4">
               Create a simple component below and experiment with Copilot suggestions
             </p>
-            {/* UNCOMMENT AND PRACTICE HERE:
             
             <YourPracticeComponent />
             
-            */}
           </section>
         </div>
       </div>
@@ -221,3 +219,12 @@ function ComplexFilter() {
  * prompting it effectively!
  *
  * ========================================== */
+
+function YourPracticeComponent() {
+  return (
+    <div>
+      <h2>Your Practice Component</h2>
+      <p>Start practicing here!</p>
+    </div>
+  )
+}

@@ -13,3 +13,25 @@ body {
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
     rgb(var(--background-start-rgb));
 }
+
+@keyframes portfolio-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio-enter {
+  animation: portfolio-enter 600ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-enter {
+    animation: none;
+  }
+}

@@ -1,304 +1,96 @@
 'use client'
 
-/**
- * MODULE 5: Final Project - Portfolio Website
- *
- * This is your capstone project! You'll build a complete personal portfolio
- * website using everything you've learned:
- * - Agent Mode for scaffolding large sections
- * - Edit Mode for surgical refinements
- * - Ask Mode for guidance and improvements
- * - Your rules for consistent styling
- *
- * Follow the step-by-step instructions marked below.
- */
+import Image from 'next/image'
+import { FormEvent, useState } from 'react'
 
-export default function Module5Portfolio() {
-  return (
-    <div className="min-h-screen">
-      {/* ==========================================
-       * 📋 PROJECT OVERVIEW
-       * ==========================================
-       *
-       * You'll build a portfolio with these sections:
-       * ✓ Header with navigation
-       * ✓ Hero section with name and tagline
-       * ✓ Projects grid with cards
-       * ✓ About section with bio and skills
-       * ✓ Contact form
-       * ✓ Footer with social links
-       *
-       * Use Agent Mode (Claude or Auto model) for big sections,
-       * then Edit Mode (Inline Chat) for refinements!
-       *
-       * ========================================== */}
-
-      {/* ==========================================
-       * 🎯 STEP 1: SCAFFOLD BASE LAYOUT
-       * ==========================================
-       *
-       * ✅ TODO: CREATE THE BASIC LAYOUT STRUCTURE
-       *
-       * Instructions:
-       * 1. Open Copilot Chat panel
-       * 2. Set model to Claude or Auto
-       * 3. Ask: "Create a portfolio layout with header, hero section,
-       *         projects grid, and footer"
-       * 4. Review the scaffolded structure
-       * 5. Accept if it has all four sections
-       *
-       * IMPORTANT: Replace this entire component with the generated layout!
-       *
-       * ========================================== */}
-
-      <div className="p-8 max-w-4xl mx-auto">
-        <div className="bg-yellow-50 border-2 border-yellow-500 rounded-lg p-6 mb-8">
-          <h1 className="text-3xl font-bold mb-4">🚀 Ready to Build Your Portfolio?</h1>
-          <p className="mb-4 text-gray-700">
-            This is where your portfolio will live. Follow the steps below to build it with Copilot
-            as your coding partner!
-          </p>
-          <div className="bg-white rounded p-4 border border-yellow-300">
-            <h2 className="font-semibold mb-2">Quick Start Guide:</h2>
-            <ol className="list-decimal list-inside space-y-2 text-sm">
-              <li>Read STEP 1 instructions above</li>
-              <li>Open Copilot Chat (Ctrl/Cmd + Shift + I)</li>
-              <li>Switch to Agent Mode with Claude/Auto model</li>
-              <li>Ask Copilot to create the base layout</li>
-              <li>Replace this placeholder with your new layout</li>
-              <li>Continue with STEP 2, 3, 4, etc.</li>
-            </ol>
-          </div>
-        </div>
-
-        {/* Placeholder sections to guide structure */}
-        <section className="border-2 border-dashed border-gray-300 rounded-lg p-8 mb-6">
-          <h2 className="text-xl font-semibold text-gray-500">📍 Header Section</h2>
-          <p className="text-gray-400">Your navigation will go here</p>
-        </section>
-
-        <section className="border-2 border-dashed border-gray-300 rounded-lg p-8 mb-6">
-          <h2 className="text-xl font-semibold text-gray-500">📍 Hero Section</h2>
-          <p className="text-gray-400">Your introduction and tagline will go here</p>
-        </section>
-
-        <section className="border-2 border-dashed border-gray-300 rounded-lg p-8 mb-6">
-          <h2 className="text-xl font-semibold text-gray-500">📍 Projects Grid</h2>
-          <p className="text-gray-400">Your project cards will go here</p>
-        </section>
-
-        <section className="border-2 border-dashed border-gray-300 rounded-lg p-8 mb-6">
-          <h2 className="text-xl font-semibold text-gray-500">📍 Footer</h2>
-          <p className="text-gray-400">Your social links will go here</p>
-        </section>
-      </div>
-
-      {/* ==========================================
-       * 🎯 STEP 2: FILL IN THE HERO SECTION
-       * ==========================================
-       *
-       * ✅ TODO: ADD CONTENT TO HERO SECTION
-       *
-       * Once you have the base layout, enhance the hero:
-       *
-       * Instructions:
-       * 1. Highlight the hero section in your new layout
-       * 2. Use Inline Chat (Ctrl/Cmd + I)
-       * 3. Ask: "Hero with my name, tagline, and a 'Contact Me' button"
-       * 4. Customize with your actual name and tagline
-       * 5. Refine: "Make the button a mailto: link to [your-email]"
-       *
-       * ========================================== */}
-
-      {/* ==========================================
-       * 🎯 STEP 3: BUILD THE PROJECTS GRID
-       * ==========================================
-       *
-       * ✅ TODO: ADD PROJECT CARDS
-       *
-       * Instructions:
-       * 1. Highlight the projects section
-       * 2. Use Agent Mode
-       * 3. Ask: "Projects section with cards: title, description,
-       *         image placeholder, and link"
-       * 4. Add 3-4 sample projects
-       * 5. Refine with Inline Chat: "Add a hover animation for each card"
-       *
-       * ========================================== */}
-
-      {/* ==========================================
-       * 🎯 STEP 4: CREATE THE FOOTER
-       * ==========================================
-       *
-       * ✅ TODO: ADD FOOTER WITH SOCIAL LINKS
-       *
-       * Instructions:
-       * 1. Highlight the footer section
-       * 2. Use Inline Chat
-       * 3. Ask: "Footer with copyright and links to GitHub,
-       *         LinkedIn, Twitter"
-       * 4. Refine: "Add aria-labels for social links"
-       * 5. Update with your actual social media URLs
-       *
-       * ========================================== */}
-
-      {/* ==========================================
-       * 🎯 STEP 5: ADD AN ABOUT SECTION
-       * ==========================================
-       *
-       * ✅ TODO: INSERT ABOUT SECTION
-       *
-       * Instructions:
-       * 1. Place cursor between Projects and Footer
-       * 2. Use Agent Mode
-       * 3. Ask: "About section with my photo placeholder,
-       *         short bio, and list of skills"
-       * 4. Refine: "Use Tailwind spacing consistent with Hero section"
-       * 5. Refine: "Keep the About text in a centered column"
-       *
-       * ========================================== */}
-
-      {/* ==========================================
-       * 🎯 STEP 6: ADD CONTACT FORM
-       * ==========================================
-       *
-       * ✅ TODO: CREATE CONTACT FORM
-       *
-       * Instructions:
-       * 1. Add a new section before the footer
-       * 2. Use Agent Mode
-       * 3. Ask: "Add a contact form with name, email,
-       *         message and basic validation"
-       * 4. Use Edit Mode: "Disable submit until all fields are valid"
-       * 5. Add: "Show success message after submission"
-       *
-       * ========================================== */}
-
-      {/* ==========================================
-       * 🎯 STEP 7: ADD DARK MODE (OPTIONAL)
-       * ==========================================
-       *
-       * ✅ TODO: IMPLEMENT DARK MODE TOGGLE
-       *
-       * Instructions:
-       * 1. Highlight the header
-       * 2. Use Agent Mode
-       * 3. Ask: "Add dark mode toggle in the header"
-       * 4. Test the toggle works across all sections
-       * 5. Refine colors if needed
-       *
-       * ========================================== */}
-
-      {/* ==========================================
-       * 🎯 STEP 8: POLISH & ANIMATIONS
-       * ==========================================
-       *
-       * ✅ TODO: ADD FINISHING TOUCHES
-       *
-       * Use Edit Mode for these refinements:
-       * 1. "Fade in hero section on page load"
-       * 2. "Add smooth scroll behavior for navigation links"
-       * 3. "Improve spacing and typography hierarchy"
-       * 4. "Ensure all sections are responsive on mobile"
-       * 5. "Add loading states where appropriate"
-       *
-       * ========================================== */}
-
-      {/* ==========================================
-       * 🎯 FINAL REVIEW CHECKLIST
-       * ==========================================
-       *
-       * Before you're done, verify:
-       *
-       * ✓ Responsive Design
-       *   - Test on mobile, tablet, desktop viewports
-       *   - Check text is readable at all sizes
-       *
-       * ✓ Accessibility
-       *   - All interactive elements have aria-labels
-       *   - Images have alt text
-       *   - Keyboard navigation works
-       *   - Color contrast is sufficient
-       *
-       * ✓ Consistency
-       *   - Follows your .github/copilot-instructions.md rules
-       *   - Uses Tailwind classes consistently
-       *   - Arrow functions throughout
-       *   - TypeScript types defined
-       *
-       * ✓ Functionality
-       *   - All links work
-       *   - Contact form validates input
-       *   - Animations are smooth
-       *   - No console errors
-       *
-       * ========================================== */}
-    </div>
-  )
+type Project = {
+  title: string
+  description: string
+  imageUrl: string
+  imageAlt: string
+  tags: string[]
 }
 
-/* ==========================================
- * 💡 TIPS FOR SUCCESS
- * ==========================================
- *
- * 1. START BIG, THEN REFINE
- *    - Use Agent Mode to scaffold entire sections quickly
- *    - Then use Edit Mode (Inline Chat) for small improvements
- *    - Don't try to get everything perfect in one prompt
- *
- * 2. ITERATE IN STEPS
- *    - Build one section at a time
- *    - Test each section before moving to the next
- *    - It's easier to debug small changes
- *
- * 3. USE ASK MODE FOR GUIDANCE
- *    - "What's the best way to structure this component?"
- *    - "How can I improve the performance here?"
- *    - "What accessibility features am I missing?"
- *
- * 4. CUSTOMIZE IT
- *    - Replace placeholder text with your real information
- *    - Add your own projects and achievements
- *    - Make it reflect your personality and style
- *
- * 5. LEARN BY REVIEWING
- *    - Don't just accept code blindly
- *    - Read what Copilot generates
- *    - Ask it to explain anything unclear
- *    - Understand the patterns so you can use them later
- *
- * 6. COMMON ISSUES & FIXES
- *    - Spacing looks off? → "Improve spacing using Tailwind"
- *    - Not responsive? → "Make this section responsive on mobile"
- *    - Missing types? → "Add TypeScript types for props"
- *    - Need animation? → "Add smooth transition animations"
- *
- * ========================================== */
+const projects: Project[] = [
+  {
+    title: 'Cedar & Salt',
+    description: 'An editorial storefront that makes product discovery feel personal and unhurried.',
+    imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Bright store interior with clothes on display',
+    tags: ['Next.js', 'Commerce', 'UX'],
+  },
+  {
+    title: 'Signal Desk',
+    description: 'An operations dashboard that helps teams sort customer signals into decisive next steps.',
+    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Analytics dashboard shown on a laptop screen',
+    tags: ['React', 'Analytics', 'Systems'],
+  },
+  {
+    title: 'Field Notes',
+    description: 'A calm writing environment for capturing ideas, shaping drafts, and sharing observations.',
+    imageUrl: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Open notebook and pen on a desk',
+    tags: ['TypeScript', 'Content', 'Design'],
+  },
+]
 
-/* ==========================================
- * 🎉 CONGRATULATIONS!
- * ==========================================
- *
- * When you complete this portfolio, you will have:
- *
- * ✓ Built a real, production-ready website with Copilot
- * ✓ Mastered Agent Mode for large scaffolding tasks
- * ✓ Used Edit Mode for precise refinements
- * ✓ Applied Ask Mode for strategic guidance
- * ✓ Leveraged rules for consistent code style
- * ✓ Created something you can actually deploy and share!
- *
- * NEXT STEPS:
- * - Deploy your portfolio to Vercel or Netlify
- * - Share it on LinkedIn and Twitter
- * - Keep practicing with Copilot on real projects
- * - Teach others what you've learned
- *
- * Remember: Copilot is a tool to amplify your skills,
- * not replace them. The more you understand code, the
- * better you'll be at directing Copilot to build
- * exactly what you envision.
- *
- * Happy coding! 🚀
- *
- * ========================================== */
+const skills = ['TypeScript', 'React', 'Next.js', 'Accessible HTML', 'Tailwind CSS', 'Product strategy']
+
+export default function Module5Portfolio() {
+  const [isDarkMode, setIsDarkMode] = useState(false)
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [submitted, setSubmitted] = useState(false)
+  const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())
+  const isFormValid = formData.name.trim() && isEmailValid && formData.message.trim()
+  const pageTheme = isDarkMode ? 'bg-slate-950 text-slate-100' : 'bg-stone-50 text-slate-900'
+  const mutedText = isDarkMode ? 'text-slate-300' : 'text-slate-600'
+
+  const updateField = (field: keyof typeof formData, value: string) => {
+    setFormData({ ...formData, [field]: value })
+    setSubmitted(false)
+  }
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    if (isFormValid) setSubmitted(true)
+  }
+
+  return (
+    <main className={`min-h-screen scroll-smooth transition-colors duration-300 ${pageTheme}`}>
+      <header className={`sticky top-0 z-10 border-b backdrop-blur ${isDarkMode ? 'border-slate-800 bg-slate-950/90' : 'border-stone-200 bg-stone-50/90'}`}>
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+          <a href="#home" className="font-serif text-xl font-bold tracking-wide">Avery Lin</a>
+          <nav aria-label="Main navigation" className="hidden items-center gap-6 text-sm font-semibold sm:flex">
+            <a href="#work" className="hover:text-teal-700">Work</a>
+            <a href="#about" className="hover:text-teal-700">About</a>
+            <a href="#contact" className="hover:text-teal-700">Contact</a>
+          </nav>
+          <button type="button" onClick={() => setIsDarkMode(mode => !mode)} aria-label={isDarkMode ? 'Use light theme' : 'Use dark theme'} className={`rounded-md border px-3 py-1.5 text-sm font-semibold transition focus:outline-none focus:ring-4 ${isDarkMode ? 'border-slate-700 hover:bg-slate-800 focus:ring-slate-700' : 'border-stone-300 hover:bg-stone-200 focus:ring-stone-300'}`}>{isDarkMode ? 'Light' : 'Dark'}</button>
+        </div>
+      </header>
+
+      <section id="home" className="mx-auto grid min-h-[620px] max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
+        <div className="portfolio-enter">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Designer and frontend developer</p>
+          <h1 className="mt-5 max-w-3xl font-serif text-5xl font-bold leading-tight sm:text-6xl">Interfaces with a point of view.</h1>
+          <p className={`mt-6 max-w-xl text-lg leading-8 ${mutedText}`}>I turn complicated digital work into clear, considered experiences for people who need to get things done.</p>
+          <div className="mt-8 flex flex-wrap gap-4"><a href="#work" className="rounded-md bg-teal-700 px-5 py-3 font-semibold text-white transition hover:bg-teal-800 focus:outline-none focus:ring-4 focus:ring-teal-300">View selected work</a><a href="#contact" className={`rounded-md border px-5 py-3 font-semibold transition focus:outline-none focus:ring-4 focus:ring-teal-200 ${isDarkMode ? 'border-slate-600 hover:border-teal-500 hover:text-teal-300' : 'border-slate-300 hover:border-teal-700 hover:text-teal-800'}`}>Get in touch</a></div>
+        </div>
+        <div className="portfolio-enter overflow-hidden rounded-lg shadow-xl">
+          <Image src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Person working at a desk with a laptop" width={1200} height={1500} priority className="aspect-[4/5] w-full object-cover" />
+        </div>
+      </section>
+
+      <section id="work" className={isDarkMode ? 'bg-slate-900' : 'bg-white'}>
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8"><p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Selected work</p><h2 className="mt-3 font-serif text-4xl font-bold">Useful, human-centered products.</h2><div className="mt-10 grid gap-6 md:grid-cols-3">{projects.map(project => <article key={project.title} className={`group overflow-hidden rounded-lg border transition duration-200 hover:-translate-y-1 hover:shadow-xl ${isDarkMode ? 'border-slate-700 bg-slate-950' : 'border-stone-200 bg-stone-50'}`}><Image src={project.imageUrl} alt={project.imageAlt} width={1200} height={900} className="aspect-[4/3] w-full object-cover transition duration-300 group-hover:scale-105" /><div className="p-5"><h3 className="font-serif text-2xl font-bold">{project.title}</h3><p className={`mt-3 leading-6 ${mutedText}`}>{project.description}</p><ul className="mt-4 flex flex-wrap gap-2" aria-label={`${project.title} technologies`}>{project.tags.map(tag => <li key={tag} className="rounded-full bg-teal-100 px-2.5 py-1 text-xs font-semibold text-teal-900">{tag}</li>)}</ul><a href="https://github.com" target="_blank" rel="noreferrer" className="mt-5 inline-block font-semibold text-teal-700 underline underline-offset-4 hover:text-teal-800">View project</a></div></article>)}</div></div>
+      </section>
+
+      <section id="about" className="mx-auto grid max-w-6xl gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.7fr_1.3fr]"><Image src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80" alt="Creative team collaborating around a table" width={900} height={900} className="aspect-square w-full rounded-lg object-cover" /><div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">About me</p><h2 className="mt-3 font-serif text-4xl font-bold">Clarity is a craft.</h2><p className={`mt-6 leading-8 ${mutedText}`}>I am a product-minded developer who enjoys the practical details: information architecture, responsive behavior, accessible interactions, and code that is comfortable to return to six months later.</p><ul className="mt-7 flex flex-wrap gap-3" aria-label="Skills">{skills.map(skill => <li key={skill} className={`rounded-md border px-3 py-2 text-sm font-medium ${isDarkMode ? 'border-slate-700 bg-slate-900' : 'border-stone-300 bg-white'}`}>{skill}</li>)}</ul></div></section>
+
+      <section id="contact" className={isDarkMode ? 'bg-slate-900' : 'bg-teal-50'}><div className="mx-auto max-w-2xl px-5 py-20 sm:px-8"><p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Contact</p><h2 className="mt-3 font-serif text-4xl font-bold">Have a project in mind?</h2><form onSubmit={handleSubmit} noValidate className="mt-8 space-y-5"><div><label htmlFor="name" className="block text-sm font-semibold">Name</label><input id="name" value={formData.name} onChange={event => updateField('name', event.target.value)} required className="mt-1.5 block w-full rounded-md border border-stone-300 bg-white px-3 py-2.5 text-slate-900 outline-none focus:border-teal-700 focus:ring-4 focus:ring-teal-200" /></div><div><label htmlFor="email" className="block text-sm font-semibold">Email</label><input id="email" type="email" value={formData.email} onChange={event => updateField('email', event.target.value)} aria-invalid={formData.email.length > 0 && !isEmailValid} aria-describedby="email-help" required className="mt-1.5 block w-full rounded-md border border-stone-300 bg-white px-3 py-2.5 text-slate-900 outline-none focus:border-teal-700 focus:ring-4 focus:ring-teal-200" /><p id="email-help" className={`mt-1 text-sm ${mutedText}`}>Use an address where I can reply.</p></div><div><label htmlFor="message" className="block text-sm font-semibold">Message</label><textarea id="message" rows={5} value={formData.message} onChange={event => updateField('message', event.target.value)} required className="mt-1.5 block w-full rounded-md border border-stone-300 bg-white px-3 py-2.5 text-slate-900 outline-none focus:border-teal-700 focus:ring-4 focus:ring-teal-200" /></div><button type="submit" disabled={!isFormValid} className="rounded-md bg-teal-700 px-5 py-3 font-semibold text-white transition hover:bg-teal-800 focus:outline-none focus:ring-4 focus:ring-teal-300 disabled:cursor-not-allowed disabled:opacity-50">Send message</button>{submitted && <p role="status" className="font-medium text-teal-700">Thanks for reaching out. I will be in touch shortly.</p>}</form></div></section>
+
+      <footer className="border-t border-slate-800 bg-slate-950 text-stone-100"><div className="mx-auto flex max-w-6xl flex-col gap-5 px-5 py-9 sm:flex-row sm:items-center sm:justify-between sm:px-8"><div><p className="font-serif text-xl font-bold">Avery Lin</p><p className="mt-1 text-sm text-slate-300">Building clear digital experiences.</p></div><div className="flex gap-5 text-sm font-semibold text-teal-300"><a href="https://github.com" target="_blank" rel="noreferrer" aria-label="Avery Lin on GitHub" className="hover:text-white">GitHub</a><a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="Avery Lin on LinkedIn" className="hover:text-white">LinkedIn</a><a href="mailto:avery@example.com" aria-label="Email Avery Lin" className="hover:text-white">Email</a></div></div></footer>
+    </main>
+  )
+}
